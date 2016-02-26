@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Gold Silver Daily Updates</string>
+    <string name="main_gold">Gold</string>
+    <string name="main_silver">Silver</string>
+    <string name="main_search">Search</string>
+    <string name="main_trends">Trends</string>
+
+    <string name="title_activity_data">Gold And Silver</string>
+    <string name="data_title_1">Gold</string>
+    <string name="data_title_2">Silver</string>
+    <string name="data_city">City</string>
+    <string name="data_gold_date">Date</string>
+    <string name="data_gold_8grams">8 grams</string>
+    <string name="data_gold_1grams">1 gram</string>
+    <string name="data_gold_change">Change</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_charts">Charts</string>
+    <string name="chart_title_1">Gold</string>
+    <string name="chart_title_2">Silver</string>
+    <string name="chart_city">City</string>
+    <string name="chart_type">Duration</string>
+
+    <string name="title_activity_search">Search</string>
+    <string name="search_button_date">Select</string>
+    <string name="search_search">Search</string>
+    <string name="search_text_date">Date</string>
+    <string name="search_hint_date">Choose Date</string>
+    <string name="search_button">Search</string>
+
+    <string-array name="city_arrays">
+        <item>Gudur</item>
+        <item>Nellore</item>
+        <item>Vijayawada</item>
+    </string-array>
+
+    <string-array name="chart_arrays">
+        <item>Last 30 Days</item>
+        <item>Last 90 Days</item>
+        <item>One Year</item>
+    </string-array>
+
+    <string name="chart_display">display</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+</resources>
+
