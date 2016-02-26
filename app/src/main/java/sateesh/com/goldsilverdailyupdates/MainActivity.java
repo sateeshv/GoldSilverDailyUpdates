@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String getAllCities_URL = "http://" + IPAddress + "/gold_smart_updates/showCities.php";
     RequestQueue requestQueue;
     ImageButton gold_icon, silver_icon, chart_icon, search_icon;
+
+    public int MAX_TRIES = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,6 +214,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
         requestQueue.add(jsonObjectRequest);
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                15000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 
     public void getCityData_method(String CityDataURL, final String lastRecordDate) {
@@ -288,6 +295,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
         requestQueue.add(jsonObjectRequest);
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
+                15000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 
 

@@ -25,7 +25,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 DatabaseContract.PriceInfo.COLUMN_GOLD_1_GM + " INTEGER NOT NULL, " +
                 DatabaseContract.PriceInfo.COLUMN_SILVER_1_GM + " INTEGER NOT NULL, " +
                 DatabaseContract.PriceInfo.COLUMN_GOLD_CHANGE + " TEXT NOT NULL, " +
-                DatabaseContract.PriceInfo.COLUMN_SILVER_CHANGE + " TEXT NOT NULL " + ");";
+                DatabaseContract.PriceInfo.COLUMN_SILVER_CHANGE + " TEXT NOT NULL, " +
+                " UNIQUE (" + DatabaseContract.PriceInfo.COLUMN_DATE + ", " +
+                DatabaseContract.PriceInfo.COLUMN_CITY_NAME + ") ON CONFLICT REPLACE " +
+                ");";
 
         final String CREATE_CITY_INFO_TABLE = "CREATE TABLE " + DatabaseContract.CityInfo.TABLE_NAME +
                 "( " + DatabaseContract.CityInfo._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
